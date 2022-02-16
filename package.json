@@ -1,0 +1,9 @@
+{
+  "name": "coldnorthagency",
+  "version": "1.0.0",
+  "description": "Website for agency",
+  "main": "index.js",
+  "repository": "git@github.com:leightongrantham/coldnorthagency.git",
+  "author": "Leighton Grantham",
+  "license": "MIT"
+}
