@@ -1,5 +1,27 @@
 :host {
+	.logo__container {
+		display: flex;
+		justify-content: center;
+
+		img {
+			height: 20rem;
+			width: 20rem;
+			position: relative;
+			bottom: 60px;
+		}
+	}
+
 	a {
 		color: black;
+
+		&:hover {
+			opacity: 0.5;
+		}
+	}
+
+	.nav {
+		position: relative;
+		top: -100px;
+		text-transform: uppercase;
 	}
 }

@@ -1,0 +1,11 @@
+identifier: k6z9p8vfka3f63n0
+appPort: 1864
+staticPort: 1668
+reloadPort: 2667
+hostName: localhost
+projectName: project
+homeFolder: /Users/leighton.grantham/PhpstormProjects/LG/cold-north-agency
+distFolder: dist/project
+outDir: /Users/leighton.grantham/PhpstormProjects/LG/cold-north-agency/dist/static/
+handle404: ''
+allowErrorCollect: true
