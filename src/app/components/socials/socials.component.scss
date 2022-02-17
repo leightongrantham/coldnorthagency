@@ -1,0 +1,10 @@
+:host .social-links a {
+	text-decoration: none;
+	opacity: 1;
+	color: black;
+	font-size: 1em;
+
+	&:hover {
+		opacity: 0.7;
+	}
+}
