@@ -1,20 +1,34 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AppComponent } from './app.component';
+import { AboutComponent } from './components/about/about.component';
+import { MusicComponent } from './components/music/music.component';
+import { ArtistsComponent } from './components/artists/artists.component';
 
 const routes: Routes = [
 	{
-		path: 'home', component: AppComponent
+		path: '', redirectTo: 'artists', pathMatch: 'full'
 	},
 	{
-		path: 'music', component: AppComponent, children: [
+		path: 'artists', component: ArtistsComponent
+	},
+	{
+		path: 'music', children: [
 			{
-				path: 'joey-stella', component: AppComponent
-			}
+				path: 'joey-stella', component: MusicComponent
+			},
+			{
+				path: 'aristydes', component: MusicComponent
+			},
+			{
+				path: 'mikrotakt', component: MusicComponent
+			},
+			{
+				path: 'twelve-seven', component: MusicComponent
+			},
 		]
 	},
 	{
-		path: 'about', component: AppComponent
+		path: 'about', component: AboutComponent
 	},
 ];
 

@@ -8,6 +8,7 @@ import { ArtistTilesComponent } from './components/artist-tiles/artist-tiles.com
 import { NavComponent } from './components/nav/nav.component';
 import { ArtistsComponent } from './components/artists/artists.component';
 import { AboutComponent } from './components/about/about.component';
+import { MusicComponent } from './components/music/music.component';
 
 @NgModule({
 	declarations: [
@@ -15,7 +16,8 @@ import { AboutComponent } from './components/about/about.component';
 		ArtistTilesComponent,
 		NavComponent,
 		ArtistsComponent,
-		AboutComponent
+		AboutComponent,
+		MusicComponent,
 	],
 	imports: [
 		BrowserModule,
