@@ -9,6 +9,9 @@ import { NavComponent } from './components/nav/nav.component';
 import { ArtistsComponent } from './components/artists/artists.component';
 import { AboutComponent } from './components/about/about.component';
 import { MusicComponent } from './components/music/music.component';
+import { SocialsComponent } from './components/socials/socials.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
 	declarations: [
@@ -18,11 +21,14 @@ import { MusicComponent } from './components/music/music.component';
 		ArtistsComponent,
 		AboutComponent,
 		MusicComponent,
+		SocialsComponent,
+  FooterComponent,
 	],
 	imports: [
 		BrowserModule,
 		AppRoutingModule,
-		CommonModule
+		CommonModule,
+		FontAwesomeModule
 	],
 	providers: [],
 	bootstrap: [AppComponent]

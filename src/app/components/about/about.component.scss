@@ -1,11 +1,28 @@
+@import '../../../styling/_variables';
+
 :host {
 	display: flex;
 	justify-content: center;
+	flex-direction: column;
+	padding: 85px;
+	width: 100%;
+
 	p {
-		margin-top: 0;
-		max-width: 50%;
-		margin-bottom: 1rem;
+		margin: auto;
+		margin-bottom: 7rem;
 		line-height: 35px;
 		opacity: 0.9
+	}
+
+	@media all and (min-width: $laptops) {
+		p {
+			max-width: 50%;
+		}
+	}
+
+	app-socials {
+		display: flex;
+		width: 100%;
+		justify-content: center;
 	}
 }

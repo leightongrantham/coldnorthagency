@@ -4,9 +4,10 @@
 			<div class="card p-3 border bg-light">
 				<div (mouseover)="isHovering=true" (mouseout)="isHovering=false" class="image-wrapper">
 					<img src="{{ artist.image }}" class="card-img-top" alt="..." (click)="navigateToArtistPage(artist.slug)">
-					<p *ngIf="isHovering"> {{ artist.name }} </p>
+<!--					<p *ngIf="isHovering"> {{ artist.name }} </p>-->
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
+

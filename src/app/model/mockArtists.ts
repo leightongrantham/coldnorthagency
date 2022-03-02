@@ -5,4 +5,5 @@ export const MOCK_ARTISTS: Artist[] = [
 	{ name: 'Aristydes', image: '../../assets/image00002.jpeg', slug: 'aristydes' },
 	{ name: 'Mikrotakt', image: '../../assets/mikrotakt.png', slug: 'mikrotakt' },
 	{ name: 'Twelve Seven', image: './../assets/IMG_0272.JPG', slug: 'twelveseven' },
+	{ name: 'Sylvia', image: './../assets/IMG_1035-1.jpg', slug: 'sylvia' },
 ];

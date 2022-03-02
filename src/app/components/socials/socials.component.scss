@@ -3,6 +3,12 @@
 	opacity: 1;
 	color: black;
 	font-size: 1em;
+	position: relative;
+	top: 12px;
+
+	p {
+		margin: 0 !important;
+	}
 
 	&:hover {
 		opacity: 0.7;

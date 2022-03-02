@@ -4,24 +4,23 @@
 		justify-content: center;
 
 		img {
-			height: 20rem;
 			width: 20rem;
+			margin: 45px;
 			position: relative;
-			bottom: 60px;
 			cursor: pointer;
 		}
 	}
 
 	li {
-		border-left: solid 1px rgb(0, 0, 0, 0.7);
+		//border-left: solid 1px #212529;
+
 		&:first-child {
 			border-left: none;
-
 		}
 	}
 
 	a {
-		color: black;
+		color: #212529;
 
 		&:hover {
 			opacity: 0.5;
@@ -30,10 +29,8 @@
 
 	.nav {
 		position: relative;
-		top: -100px;
 		text-transform: uppercase;
-		font-size: 1.3em;
-		font-style: oblique;
+		font-size: 0.8em;
 
 		.active {
 			opacity: 0.5;

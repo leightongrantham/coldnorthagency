@@ -22,13 +22,14 @@
 		overflow: hidden;
 		display: flex;
 		justify-content: center;
-		width: 25vw;
+		width: 250px;
 		height: 25vh;
 		margin: 10px 0;
 		background: rgba(0, 0, 0, 0.5);
 		box-shadow: 0 0 3px black;
 
 		p {
+			z-index: 1;
 			display: flex;
 			align-items: center;
 			text-transform: uppercase;
@@ -50,6 +51,4 @@
 			}
 		}
 	}
-
-
 }

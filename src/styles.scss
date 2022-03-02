@@ -3,10 +3,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
 @import "~animate.css/animate.min.css";
 
+html {
+	height: 100%;
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
 body {
+	//position: relative;
+	//display: flex;
+	//flex-direction: column;
+	//min-height: 100%;
+	//margin: 0;
 	background: $baseOff;
 	font-family: 'Montserrat', sans-serif;
+	color: #212529;
 	font-size: 20px;
+	font-weight: bolder !important;
 	animation: fadeIn; /* referring directly to the animation's @keyframe declaration */
 	animation-duration: 2s; /* don't forget to set a duration! */
 }
@@ -15,3 +33,6 @@ body {
 	background: none !important;
 	border: none !important;
 }
+
+
+
