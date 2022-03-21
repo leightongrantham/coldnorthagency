@@ -7,7 +7,7 @@ import { ArtistTilesComponent } from './components/artist-tiles/artist-tiles.com
 
 const routes: Routes = [
 	{
-		path: '', redirectTo: 'artists', pathMatch: 'full'
+		path: '', redirectTo: 'home', pathMatch: 'full'
 	},
 	{
 		path: 'home', component: ArtistTilesComponent
