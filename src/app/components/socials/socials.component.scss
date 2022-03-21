@@ -1,16 +1,28 @@
-:host .social-links a {
-	text-decoration: none;
-	opacity: 1;
-	color: black;
-	font-size: 1em;
-	position: relative;
-	top: 12px;
+@import "../../../styling/variables";
 
-	p {
-		margin: 0 !important;
+:host {
+
+	span {
+		position: relative;
+		top: 11px;
+		font-size: 1.2rem;
 	}
 
-	&:hover {
-		opacity: 0.7;
+	.social-links a {
+		text-decoration: none;
+		opacity: 1;
+		font-size: 1em;
+		color: $font;
+		position: relative;
+		top: 12px;
+		margin: 15px;
+
+		p {
+			margin: 0 !important;
+		}
+
+		&:hover {
+			opacity: 0.7;
+		}
 	}
 }

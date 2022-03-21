@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { faInstagram, IconDefinition } from '@fortawesome/free-brands-svg-icons';
-
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-socials',
@@ -9,4 +9,5 @@ import { faInstagram, IconDefinition } from '@fortawesome/free-brands-svg-icons'
 })
 export class SocialsComponent {
 	public faInstagram: IconDefinition = faInstagram;
+	public faEnvelope: IconDefinition = faEnvelope;
 }

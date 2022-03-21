@@ -19,7 +19,7 @@ export class ArtistTilesComponent implements OnInit {
 
 
 	public navigateToArtistPage(slug: string): void {
-		this.router.navigate([`/music/${slug}`], )
+		this.router.navigate([`/artists/${slug}`],)
 	}
 
 }

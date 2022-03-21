@@ -12,6 +12,10 @@ import { MusicComponent } from './components/music/music.component';
 import { SocialsComponent } from './components/socials/socials.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FooterComponent } from './components/footer/footer.component';
+import { SubscribeFormComponent } from './components/subscribe-form/subscribe-form.component';
+import { MailchimpService } from './services/mailchimp.service';
+import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
 	declarations: [
@@ -22,15 +26,20 @@ import { FooterComponent } from './components/footer/footer.component';
 		AboutComponent,
 		MusicComponent,
 		SocialsComponent,
-  FooterComponent,
+		FooterComponent,
+  		SubscribeFormComponent,
 	],
 	imports: [
 		BrowserModule,
 		AppRoutingModule,
 		CommonModule,
-		FontAwesomeModule
+		FontAwesomeModule,
+		HttpClientModule,
+		ReactiveFormsModule
 	],
-	providers: [],
+	providers: [
+		MailchimpService
+	],
 	bootstrap: [AppComponent]
 })
 export class AppModule {
