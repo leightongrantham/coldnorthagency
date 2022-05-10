@@ -1,5 +1,8 @@
+import { Entry } from 'contentful';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { ContentfulService } from '../../services/contentful.service';
+import { Artist } from '../../interfaces/artist';
 
 @Component({
 	selector: 'app-artists',
@@ -7,20 +10,31 @@ import { ActivatedRoute } from '@angular/router';
 	styleUrls: ['./artists.component.scss']
 })
 export class ArtistsComponent implements OnInit {
-	public title: string;
-	public description: string;
-	public imageSrc: string;
+	public artist = <Artist>{};
 
-	constructor(private router: ActivatedRoute) {
+	constructor(private router: ActivatedRoute,
+				private contentful: ContentfulService) {
 	}
 
 	ngOnInit(): void {
-		this.router.data.subscribe(data => {
-			this.title = data['title'];
-			this.description = data['description'];
-			this.imageSrc = data['imageSrc'];
-		});
+		this.contentful.getArtists()
+			.then((artists: Entry<any>[]) => {
+				artists.forEach((artist) => {
+					let { name } = artist.fields || {};
+					let { description } = artist.fields || {};
+					let { url } = artist.fields.image.fields.file || {};
+					let { slug } = artist.fields || {};
 
+					console.log(artist)
+
+					this.router.params.subscribe(data => {
+						if (data.slug === slug) {
+							this.artist.name = name;
+							this.artist.description = description
+							this.artist.image = url;
+						}
+					});
+				});
+			})
 	}
-
 }

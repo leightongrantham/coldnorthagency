@@ -3,8 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/coldnorthagency.iml" filepath="$PROJECT_DIR$/.idea/coldnorthagency.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../../nest-microservice/.idea/nest-microservice.iml" filepath="$PROJECT_DIR$/../../nest-microservice/.idea/nest-microservice.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../../nest-project/.idea/nest-project.iml" filepath="$PROJECT_DIR$/../../nest-project/.idea/nest-project.iml" />
     </modules>
   </component>
 </project>

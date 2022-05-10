@@ -1,5 +1,9 @@
 <div class="container">
-	<img src="{{ imageSrc }}">
-	<h3>{{ title }}</h3>
-	<p>{{ description }}</p>
+	<div class="left">
+		<img alt="{{ artist.name }}" height="500" src="{{ artist.image }}">
+	</div>
+	<div class="right">
+		<h3>{{ artist.name }}</h3>
+		<p>{{ artist.description }}</p>
+	</div>
 </div>

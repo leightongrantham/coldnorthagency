@@ -16,6 +16,7 @@ import { SubscribeFormComponent } from './components/subscribe-form/subscribe-fo
 import { MailchimpService } from './services/mailchimp.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ContentfulService } from './services/contentful.service';
 
 @NgModule({
 	declarations: [
@@ -27,7 +28,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 		MusicComponent,
 		SocialsComponent,
 		FooterComponent,
-  		SubscribeFormComponent,
+		SubscribeFormComponent,
 	],
 	imports: [
 		BrowserModule,
@@ -39,7 +40,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 	],
 	providers: [
 		MailchimpService,
-		[Location, {provide: LocationStrategy, useClass: HashLocationStrategy}],
+		ContentfulService,
+		[Location, { provide: LocationStrategy, useClass: HashLocationStrategy }],
 	],
 	bootstrap: [AppComponent]
 })
