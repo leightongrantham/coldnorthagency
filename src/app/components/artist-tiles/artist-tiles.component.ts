@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { NavigationStart, Router } from '@angular/router';
 import { ContentfulService } from '../../services/contentful.service';
 import { Entry } from 'contentful';
 
@@ -17,19 +17,29 @@ interface Artist {
 })
 export class ArtistTilesComponent implements OnInit {
 	public isHovering: boolean = false;
+	public isLoading: boolean = false;
 
 
 	public artists: Entry<Artist>[] = [];
 
 	constructor(private router: Router, private contentful: ContentfulService) {
+		router.events.subscribe(event => {
+			if(event instanceof NavigationStart) {
+
+				console.log('started');
+			}
+			// NavigationEnd
+			// NavigationCancel
+			// NavigationError
+			// RoutesRecognized
+		});
 	}
 
 	ngOnInit(): void {
 		this.contentful.getArtists()
 			.then((artists: Entry<Artist>[]) =>{
 				this.artists = artists;
-				console.log(this.artists);
-			} )
+			})
 	}
 
 	public navigateToArtistPage(slug: string): void {
