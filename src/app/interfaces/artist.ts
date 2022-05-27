@@ -3,4 +3,5 @@ export interface Artist {
 	description: string;
 	image: string;
 	slug: string;
+	agent: string;
 }

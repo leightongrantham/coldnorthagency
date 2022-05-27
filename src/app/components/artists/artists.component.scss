@@ -6,7 +6,10 @@
 		}
 
 		.right {
-
+			.socials__container {
+				display: flex;
+				justify-content: center;
+			}
 		}
 
 		img {
@@ -27,7 +30,8 @@
 		p {
 			text-align: center;
 			font-size: 1rem;
-			margin: 50px
+			margin: 50px;
+			font-weight: normal
 		}
 
 	}

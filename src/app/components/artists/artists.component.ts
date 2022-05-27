@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ContentfulService } from '../../services/contentful.service';
 import { Artist } from '../../interfaces/artist';
+import { faSoundcloud, faInstagram } from "@fortawesome/free-brands-svg-icons";
 
 @Component({
 	selector: 'app-artists',
@@ -11,6 +12,8 @@ import { Artist } from '../../interfaces/artist';
 })
 export class ArtistsComponent implements OnInit {
 	public artist = <Artist>{};
+	public faSoundcloud = faSoundcloud;
+	public faInstagram = faInstagram;
 
 	constructor(private router: ActivatedRoute,
 				private contentful: ContentfulService) {

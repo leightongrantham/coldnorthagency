@@ -6,12 +6,16 @@
 		<h3>{{ artist.name }}</h3>
 		<h5>Location placeholder</h5>
 
-		<span>RA</span>
-		<span>Soundcloud</span>
-		<span>Facebook</span>
+		<div class="socials__container">
+			<span>Resident Advisor</span>
+			<span>|</span>
+			<span><fa-icon [icon]="faInstagram"></fa-icon></span>
+			<span>|</span>
+			<span><fa-icon [icon]="faSoundcloud"></fa-icon></span>
+		</div>
 
 		<p>{{ artist.description }}</p>
 
-		<p>Booking Contact: joey@coldnorth.agency</p>
+		<p>Booking Contact: {{ artist?.agent || "joey@coldnorth.agency"}}</p>
 	</div>
 </div>

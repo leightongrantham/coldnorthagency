@@ -6,7 +6,7 @@
 	flex-direction: column;
 	padding: 85px;
 	width: 100%;
-	height: 36rem;
+	min-height: 36rem;
 
 	h2 {
 		text-align: center;
@@ -15,7 +15,8 @@
 		margin: auto;
 		margin-bottom: 7rem;
 		line-height: 35px;
-		opacity: 0.9
+		opacity: 0.9;
+		font-size: 1rem;
 	}
 
 	@media all and (min-width: $laptops) {

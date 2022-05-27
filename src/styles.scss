@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
 @import "~animate.css/animate.min.css";
 
+
 html {
 	height: 100%;
 	box-sizing: border-box;
@@ -12,6 +13,7 @@ html {
 *:before,
 *:after {
 	box-sizing: inherit;
+	margin: 5px;
 }
 
 body {
@@ -28,6 +30,10 @@ body {
 	font-weight: bolder !important;
 	animation: fadeIn; /* referring directly to the animation's @keyframe declaration */
 	animation-duration: 2s; /* don't forget to set a duration! */
+}
+
+.app-wrapper {
+	overflow-x: hidden;
 }
 
 .card {
