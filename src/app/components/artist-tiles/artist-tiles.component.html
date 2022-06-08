@@ -2,9 +2,8 @@
 	<div class="row">
 		<div *ngFor="let artist of artists" class="col-auto">
 			<div class="card p-3 border bg-light animate__animated animate__fadeIn">
-				<div (mouseover)="isHovering=true" (mouseout)="isHovering=false" class="image-wrapper">
+				<div class="image-wrapper">
 					<img src="{{ artist.fields.image.fields.file.url }}" class="card-img-top" alt="..." (click)="navigateToArtistPage(artist.fields.slug)">
-<!--					<p *ngIf="isHovering"> {{ artist.name }} </p>-->
 				</div>
 			</div>
 		</div>

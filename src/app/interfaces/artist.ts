@@ -3,5 +3,9 @@ export interface Artist {
 	description: string;
 	image: string;
 	slug: string;
-	agent: string;
+	contact: string;
+	location: string;
+	residentAdvisorLink: string;
+	instagramLink: string;
+	soundcloudLink: string;
 }

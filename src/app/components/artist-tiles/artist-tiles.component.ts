@@ -35,6 +35,10 @@ export class ArtistTilesComponent implements OnInit {
 		});
 	}
 
+	showName(name) {
+		console.log(name);
+	}
+
 	ngOnInit(): void {
 		this.contentful.getArtists()
 			.then((artists: Entry<Artist>[]) =>{

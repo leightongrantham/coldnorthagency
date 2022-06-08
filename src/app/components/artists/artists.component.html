@@ -4,18 +4,23 @@
 	</div>
 	<div class="right p-5">
 		<h3>{{ artist.name }}</h3>
-		<h5>Location placeholder</h5>
+		<h5>{{ artist.location }}</h5>
 
 		<div class="socials__container">
-			<span>Resident Advisor</span>
+			<span><a href="{{ artist.residentAdvisorLink }}">Resident Advisor</a></span>
 			<span>|</span>
-			<span><fa-icon [icon]="faInstagram"></fa-icon></span>
+			<span><a href="{{ artist.instagramLink}}"><fa-icon [icon]="faInstagram"></fa-icon></a></span>
 			<span>|</span>
-			<span><fa-icon [icon]="faSoundcloud"></fa-icon></span>
+			<span><a href="{{ artist.soundcloudLink }}"><fa-icon [icon]="faSoundcloud"></fa-icon></a></span>
 		</div>
 
 		<p>{{ artist.description }}</p>
 
-		<p>Booking Contact: {{ artist?.agent || "joey@coldnorth.agency"}}</p>
+		<p>
+			<a href="mailto:{{artist.contact}}">
+				<fa-icon [icon]="faMailForward">
+				</fa-icon>
+			</a>
+		</p>
 	</div>
 </div>

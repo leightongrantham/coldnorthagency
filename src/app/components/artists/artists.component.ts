@@ -3,7 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ContentfulService } from '../../services/contentful.service';
 import { Artist } from '../../interfaces/artist';
-import { faSoundcloud, faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { faSoundcloud, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
 	selector: 'app-artists',
@@ -14,6 +15,7 @@ export class ArtistsComponent implements OnInit {
 	public artist = <Artist>{};
 	public faSoundcloud = faSoundcloud;
 	public faInstagram = faInstagram;
+	public faMailForward = faEnvelope;
 
 	constructor(private router: ActivatedRoute,
 				private contentful: ContentfulService) {
@@ -27,14 +29,22 @@ export class ArtistsComponent implements OnInit {
 					let { description } = artist.fields || {};
 					let { url } = artist.fields.image.fields.file || {};
 					let { slug } = artist.fields || {};
-
-					console.log(artist)
+					let { location } = artist.fields || {};
+					let { contact } = artist.fields || {};
+					let { residentAdvisorLink } = artist.fields || {};
+					let { instagramLink } = artist.fields || {};
+					let { soundcloudLink } = artist.fields || {};
 
 					this.router.params.subscribe(data => {
 						if (data.slug === slug) {
 							this.artist.name = name;
 							this.artist.description = description
 							this.artist.image = url;
+							this.artist.location = location;
+							this.artist.contact = contact;
+							this.artist.residentAdvisorLink = residentAdvisorLink;
+							this.artist.instagramLink = instagramLink;
+							this.artist.soundcloudLink = soundcloudLink;
 						}
 					});
 				});

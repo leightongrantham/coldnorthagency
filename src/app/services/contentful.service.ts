@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 import { createClient, Entry } from 'contentful';
 
 const CONFIG = {
-	space: 'ms5y63appw29',
-	accessToken: 'R_JbgCi516Tolk-HOjbi0AGcfSlUNFgUfPHeMU9pr3A',
+	space: 'izz9zhkzdssi',
+	accessToken: 'fFra9xdZvcAZgbNOGyIgf7tcwb8vRwUcMVOPLcGA058',
 
 	contentTypeIds: {
 		artist: 'artist'
